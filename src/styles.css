@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import url(C:\Users\Mateusz\Desktop\nowaApka\newApplication_frontend\node_modules\bootstrap\dist\css\bootstrap.min.css);*/
+/*@import url(C:\Users\Mateusz\Desktop\nowaApka\newApplication_frontend\node_modules\font-awesome\css\font-awesome.css);*/
+.Pattern
+{
+    height: 1000px;
+    background: linear-gradient(to right,#0b0c0c, #203a43, #0f2027);
+}

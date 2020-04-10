@@ -1,0 +1,75 @@
+.toolbar #Line
+{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    margin-left: 0px;
+    height: 100px;
+    background: linear-gradient(to right,#020202, #2f4046, #030200);
+    
+}
+
+/*MAIL BUTTON & LABEL*/
+.toolbar #mail
+{
+ position: fixed;
+ top:10px;
+ right: 410px;
+}
+
+.toolbar #email-label
+{
+    color: aliceblue;
+    position: fixed;
+    top:80px;
+    right: 410px;
+}
+/*REGISTRATION BUTTON & LABEL*/
+.toolbar #registration
+{
+    position: fixed;
+ top:10px;
+ right: 290px;
+ 
+}
+
+.toolbar #registration-label
+{
+    color: aliceblue;
+    position: fixed;
+    top:80px;
+    right: 270px;
+}
+/*HOME BUTTON & LABEL*/
+.toolbar #home
+{
+    position: fixed;
+ top:10px;
+ right: 70px;
+ 
+}
+
+.toolbar #home-label
+{
+    color: aliceblue;
+    position: fixed;
+    top:80px;
+    right: 80px;
+}
+
+/*LOGIN BUTTON & LABEL */
+
+.toolbar #login
+{
+    position: fixed;
+ top:10px;
+ right: 180px;
+}
+
+.toolbar #login-label
+{
+    color: aliceblue;
+    position: fixed;
+    top:80px;
+    right: 190px;
+}

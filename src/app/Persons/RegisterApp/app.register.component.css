@@ -1,0 +1,132 @@
+.registration-class #registration-img 
+{
+    position: absolute;
+    top:300px;
+    right: 600px;
+    opacity: 1;
+}
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 62,5%;
+}
+
+body {
+  height: 100vh;
+	width: 100%;
+  background: #0f2027; /* fallback for old browsers */
+  background: linear-gradient(to right,#0b0c0c, #203a43, #0f2027);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.name__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.name__input {
+  font-family:'Roboto',  sans-serif;
+  color: rgb(180, 180, 180);
+  font-size: 1.2rem;
+  position: absolute;
+  top:460px;
+  right:610px;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgba(80, 79, 79, 0.952);
+  border: none;
+  width: 150;
+  transition: all 0.3s;
+}
+
+.password__label{
+    font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.password__input{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(180, 180, 180);
+  font-size: 1.2rem;
+  position: absolute;
+  top:560px;
+  right:610px;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgba(80, 79, 79, 0.952);
+  border: none;
+  width: 150;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.email__label{
+    font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.email__input{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(180, 180, 180);
+  font-size: 1.2rem;
+  position: absolute;
+  top:660px;
+  right:610px;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgba(80, 79, 79, 0.952);
+  border: none;
+  width: 150;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.registration-class #submit_button{
+
+  background-color:#3f3f3f;
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	text-decoration:none;
+	color: rgb(180, 180, 180);
+	background-image: linear-gradient(bottom, rgb(61, 61, 61) 0%, rgb(75, 75, 75) 100%);
+	border-radius: 5px;
+	box-shadow: inset 0px 1px 0px #3f3f3f, 0px 5px 0px 0px #322620, 0px 10px 5px #999;
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  top:760px;
+  right:44.3%;
+  border-radius: 0.5rem;
+}
+
+.show{
+  position: absolute;
+  top:860px;
+  right:560px;
+}

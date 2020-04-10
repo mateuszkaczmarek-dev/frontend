@@ -1,0 +1,45 @@
+<form #userForm="ngForm" (submit)="postRegistration(userForm)"> 
+  <div  @fade class="registration-class">
+    <img 
+    id="registration-img" src="/assets/icons/regi-banner.png">
+
+    <!--Login-->
+    <div>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <div class="form__group">
+  <input type="text" class="name__input"  name="login" [(ngModel)]="person.login"  placeholder="Login" required="" autocomplete="off"/>
+  <label for="name" class="name__label"></label>
+    </div>
+</div>
+    <!--Password-->
+  <div>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <div class="password__group">
+  <input type="text" class="password__input" name="password" [(ngModel)]="person.password" placeholder="Password"  required="" autocomplete="off"/>
+  <label for="password" class="password__label"></label>
+  </div>
+</div>
+  <!--Email-->
+
+  <div>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <div class="email__group">
+  <input type="text" class="email__input" name="email" [pattern]="emailPattern" [(ngModel)]="person.email" placeholder="E-mail"  required="" autocomplete="off"/>
+  <label for="email" class="email__label"></label>
+  </div>
+</div>
+
+<!--Submit Button-->
+<div>
+<button id="submit_button" >Submit</button>
+</div>
+
+<div>
+  <ul>
+      <h1></h1>
+  </ul>
+</div>
+</div>
+
+
+
