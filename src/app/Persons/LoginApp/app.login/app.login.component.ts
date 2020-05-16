@@ -4,6 +4,11 @@ import { Person } from '../../models/person.interface';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { NgForm } from '@angular/forms';
+import { AppAdminComponent } from '../../ADMIN/admin/app.admin.component';
+import { AppUserComponent } from '../../USER/user/app.user.component';
 @Component({
   selector: 'app-app.login',
   templateUrl: './app.login.component.html',
@@ -23,51 +28,85 @@ export class AppLoginComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private apiService: ApiService
+    //private http: HttpClient
   ) { }
+
+  
   appComponent: AppComponent;
   person: Person[];
+  per: Person = {
+    username: '',
+    password: ''
+  };
   personList: Array<Person>;
   
-    login: string;
-    password: string;
   
-  isValid: boolean;
+  public isValid: boolean = false;
   message: any;
 
 
   ngOnInit(): void {
-
+    
   }
 
-  /*public checkLogin(login: string, password: string) {
+  public checkLogin(username: string, password: string) {
 
     this.apiService.getAll().subscribe(data => {
       this.person = data;
-
+      /*if(username === null && password === null){
+        alert('Empty fields detected ! Please refill empty fields');
+      }*/
+      
       for (const pers of this.person) {
-        if (login === pers.login && password === pers.password) {
+        
+        if (username === pers.username && password === pers.password) {
           this.isValid = true;
-          alert('Login successfull by ' + login);
-          if (pers.role === 'ADMIN') {
+          AppUserComponent.validation = this.isValid;
+          AppAdminComponent.validation = this.isValid;
+          alert('Login successfull by ' + username);
+          if (pers.roles === 'ROLE_ADMIN') {
+            
             this.router.navigate(['/root']);
+            sessionStorage.setItem('username', username);
+          } else if (pers.roles === 'ROLE_USER') {
+            this.router.navigate(['/user']);
+            sessionStorage.setItem('username', username);
           }
           break;
         }
 
-      }
-      if (!this.isValid) {
+      
+      else {
+        AppAdminComponent.validation = false;
+       AppUserComponent.validation = false;
+        
         alert('Incorrect data');
       }
-    }
+      }
+  } 
     );
   }
-*/
 
-  public checkLogin() {
-    let resp = this.apiService.login(this.login, this.password);
-    resp.subscribe(data => {
-      this.message = data;
-      this.router.navigate(['/root']);
-    });
-  }
+
+ /* login() {
+   let resp = this.apiService.login(this.person.username, this.person.password);
+   resp.subscribe(data => {
+      console.log(data); })
+  }*/
+  /*public checkLogin() {
+    let url = 'http://localhost:8080/api/login';
+    let result = this.http.post(url, {
+          login: this.person.login,
+          password: this.person.password
+      }).subscribe(isValid => {
+          if (isValid) {
+              sessionStorage.setItem(
+                'token', btoa(this.person.login + ':' + this.person.password)
+              );
+          this.router.navigate(['/root']);
+          } else {
+              alert('Authentication failed.')
+          }
+      });
+}*/
 }

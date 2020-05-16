@@ -1,5 +1,5 @@
 export class Person {
-    login: string;
+    username: string;
     password: string;
     email?: string;
-    role?: string; }
+    roles?: string; }

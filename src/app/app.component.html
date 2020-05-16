@@ -53,6 +53,20 @@
   />
   <label id="home-label">HOME</label>
 </a>
+
+<a *ngIf="isLoggedIn" href="/login">
+  <input 
+    @fade
+    id="logout" type="image" alt="Login"
+    width="60"
+    alt="Hom"
+    title="logout"
+    src="/assets/icons/logout.png"
+    (click)="logout()"
+  />
+  <label id="logout-label">LOGOUT</label>
+</a>
+
 </div>
 </div>
 <router-outlet></router-outlet>

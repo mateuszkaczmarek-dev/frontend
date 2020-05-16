@@ -73,3 +73,19 @@
     top:80px;
     right: 190px;
 }
+
+.toolbar #logout
+{
+    position: fixed;
+ top:17px;
+ right: 520px;
+}
+
+.toolbar #logout-label
+{
+    color: aliceblue;
+    position: fixed;
+    font-size: 15.5px;
+    top:80px;
+    right: 518px;
+}

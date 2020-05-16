@@ -1,13 +1,36 @@
-<div>
+<div class="admin">
+    <!--LOGOUT BUTTON-->
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
 <h2>ADMIN PAGE</h2>
-
-    <ul *ngFor="let per of person">
-        <h3>LOGIN = {{per.login}}</h3>
-        <h3>PASSWORD = {{per.password}}</h3>
-        <h3>EMAIL = {{per.email}}</h3>
-        <h3>ROLE = {{per.role}}</h3>
-    </ul>
-
-
+<body>
+    <div class="container">
+        <table class="table">
+           <thead>
+               <tr>
+                   <th>Id</th>
+                   <th>Name</th>
+                   <th>Email</th>
+                   <th>Roles</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let per of person">
+                   <td>{{per.id}}</td>
+                   <td>{{per.username}}</td>
+                   <td>{{per.email}}</td>
+                   <td>{{per.roles}}</td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+</body>
 
   

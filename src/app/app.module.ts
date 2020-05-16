@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation/navigation.component';
+import { AppUserComponent } from './Persons/USER/user/app.user.component';
 
 
 
@@ -16,7 +17,8 @@ import { NavigationComponent } from './navigation/navigation/navigation.componen
   declarations: [
     AppComponent,
     routingCompomponents,
-    NavigationComponent
+    NavigationComponent,
+    AppUserComponent,
   ],
   imports: [
     BrowserModule,

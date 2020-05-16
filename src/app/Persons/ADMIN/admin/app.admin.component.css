@@ -1,14 +1,11 @@
-div{
-    font-family:'Roboto',  sans-serif;
-    color: rgb(180, 180, 180);
-    font-size: 1.2rem;
+.admin
+{
     position: absolute;
-    top:460px;
-    right:610px;
-    padding: 1.5rem 2rem;
-    border-radius: 0.2rem;
-    background-color: rgba(80, 79, 79, 0.952);
-    border: none;
-    width: 150;
-    transition: all 0.3s;
+    top: 100px;
+    right: 500px;
+}
+
+.table
+{
+    background-color: transparent;
 }

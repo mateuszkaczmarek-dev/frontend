@@ -4,6 +4,7 @@ import { AppRegisterComponent } from './Persons/RegisterApp/app.register.compone
 import { AppLoginComponent } from './Persons/LoginApp/app.login/app.login.component';
 import { AppAdminComponent } from './Persons/ADMIN/admin/app.admin.component';
 import { AppComponent } from './app.component';
+import { AppUserComponent } from './Persons/USER/user/app.user.component';
 
 
 
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'home' , component: AppComponent},
   {path: 'register' , component: AppRegisterComponent},
   {path: 'login' , component: AppLoginComponent},
-  {path: 'root' , component: AppAdminComponent}
+  {path: 'root' , component: AppAdminComponent},
+  {path: 'user' , component: AppUserComponent}
 
 ];
 
@@ -20,4 +22,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingCompomponents = [AppRegisterComponent, AppLoginComponent, AppAdminComponent ];
+export const routingCompomponents = [AppRegisterComponent, AppLoginComponent, AppAdminComponent , AppUserComponent];

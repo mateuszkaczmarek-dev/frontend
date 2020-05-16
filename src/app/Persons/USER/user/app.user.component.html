@@ -1,0 +1,25 @@
+<body class="body">
+    <h2>Welcome {{username}}!</h2>
+
+
+    <ul *ngFor="let quest of question">
+        <li>
+            <div>
+            {{quest.id}}.{{quest.question}}
+             
+
+                <div class="radioButton">
+
+                    <input type="radio" value="TAK" name="{{quest.question}}">
+                    TAK
+               
+                    <input type="radio" value="NIE" name="{{quest.question}}">
+                    NIE
+                </div>  
+                
+            
+            </div>
+        </li>
+    </ul>
+    <button class="button" ngSubbmit="">Submit</button>
+</body>

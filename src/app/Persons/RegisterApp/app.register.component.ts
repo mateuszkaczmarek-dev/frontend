@@ -29,10 +29,10 @@ export class AppRegisterComponent implements OnInit {
  constructor(private apiService: ApiService) { }
   emailPattern = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
   ngOnInit() {
-      this.getAllPerson();
+      //this.getAllPerson();
   }
 postRegistration(ngForm: NgForm): void {
-  if (this.person.login != null && this.person.password != null && this.person.email != null) {
+  if (this.person.username != null && this.person.password != null && this.person.email != null) {
   this.apiService.postRegistration(this.person)
       .subscribe( res => {
         location.reload();
@@ -43,14 +43,14 @@ postRegistration(ngForm: NgForm): void {
    alert('Empty fields detected');
  }
  }
-public getAllPerson() {
+/*public getAllPerson() {
       this.apiService.getAll().subscribe(
       res => {
         this.personTwo = res;
       },
       err => {
         alert('An error is accurated');
-      }); }
+      }); }*/
 
 
 }
