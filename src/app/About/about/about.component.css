@@ -1,0 +1,55 @@
+#jed{
+    font-family:'Roboto',  sans-serif;
+    color: rgb(180, 180, 180);
+    display: block;
+      margin:0 auto;
+      text-align: center;
+      margin-top: 20%; 
+      width: 60%;
+    height: 60px;
+}
+
+#dwa{
+    font-family:'Roboto',  sans-serif;
+    color: rgb(180, 180, 180);
+    display: block;
+      margin:0 auto;
+      text-align: left;
+      margin-top: 10%; 
+      width: 70%;
+    height: 60px;
+}
+
+#trzy{
+    font-family:'Roboto',  sans-serif;
+    color: rgb(180, 180, 180);
+    display: block;
+      margin:0 auto;
+      text-align: left;
+      margin-top: 10%; 
+      width: 70%;
+    height: 60px;
+}
+
+#cztery{
+    font-family:'Roboto',  sans-serif;
+    color: rgb(180, 180, 180);
+    display: block;
+      margin:0 auto;
+      text-align: left;
+      margin-top: 10%; 
+      width: 70%;
+    height: 60px;
+}
+
+#pieć{
+    font-family:'Roboto',  sans-serif;
+    color: rgb(180, 180, 180);
+    display: block;
+      margin:0 auto;
+      text-align: left;
+      margin-top: 10%; 
+      margin-bottom: 10%;
+      width: 70%;
+    height: 60px;
+}

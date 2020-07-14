@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<body id="bod">
+   
+    
+        <h2 id="jed">
+            Jesteś w ankiecie numerycznej , wypełnij ją! Możesz również dodac pytanie.
+            Po naciśnięciu przycisku "Zatwierdź" wygeneruje się plik Excel.
+        </h2>
+        <h3 id="dwa">Pytań {{counterNumeric}} z {{counterNumeric+counterYesNo}}</h3>
+        <section id="container" *ngFor="let quest of question; index as i">
+                <br>
+                   
+                      {{i+1}}.{{quest.question}}
+                      [ zakres {{quest.min}} - {{quest.max}} ]
+                        <input  id="input" name="num" type="number" [(ngModel)]="answers[i]" required="">
+                        
+                   
+            
+
+        </section>
+        <button id="zatwierdz" type="submit" (click)="check()">Zatwierdź</button>
+
+            <h2 id="trzy">Tutaj wpisz jakie pytanie chcesz dodać.</h2>
+
+            <textarea type="text" id="input_addquestion" rows="4" cols="50" name="input"
+                [(ngModel)]="addQuestion.question"></textarea>
+            
+                <h3 id="cztery">Określ zakres liczbowy pytania:</h3>
+                
+                    <h4 id="min">Liczba Min <input  id="input" name="num" type="number" [(ngModel)]="min" required=""></h4>
+                    
+                    <h4 id="max">Liczba Max <input  id="input" name="num" type="number" [(ngModel)]="max" required=""></h4>
+                
+                <button id="button_addquestion" type="submit" (click)="add(addQuestion.question,min,max)">Dodaj pytanie</button>
+            
+        
+   
+</body>

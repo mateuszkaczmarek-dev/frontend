@@ -1,73 +1,65 @@
 <div class="toolbar" role="banner">
   <div id="Line">
+    <MARQUEE id="description" hspace="0" marquee scrolldelay="200">Witamy w ankiecie wspomagającej ludzi z migrenami lub guzami</MARQUEE>
   </div>
   <div id="LineComponents">
   <!--Email Button-->
-  <a target="_blank" rel="noopener" href="https://poczta.o2.pl/zaloguj">
+  <a  rel="noopener" routerLink="/about" routerLinkActive="active">
   <input 
     @fade
     id="mail" type="image" alt=""
     width="70"
     alt="Mail"
-    title="E-Mail"
-    src="/assets/icons/email.png"
+    title="E-mail"
+    src="/assets/icons/info.png"
   />
-  <label id="email-label">E-MAIL</label>
+  <label id="email-label">Aplikacja</label>
 </a>
 
 <!--Registration Button-->
-<a  rel="noopener" href="/register">
+<a  rel="noopener" routerLink="/register" routerLinkActive="active">
   <input 
     @fade
     id="registration" type="image" alt="Login"
     width="70"
     alt="Reg"
-    title="Register"
+    title="Rejestracja"
     src="/assets/icons/register.png"
   />
   
-  <label id="registration-label">REGISTRATION</label>
+  <label id="registration-label">Rejestracja</label>
 </a>
 <!--Login Button-->
-<a  rel="noopener" href="/login">
+<a  rel="noopener" routerLink="/login" routerLinkActive="active">
   <input 
     @fade
     id="login" type="image" alt="Login"
     width="70"
     alt="Reg"
-    title=login
+    title=logowanie
     src="/assets/icons/login.png"
   />
-  <label id="login-label">LOGIN</label>
+  <label id="login-label">Logowanie</label>
 </a>
 
 <!--Home Button-->
-<a  rel="noopener" href="/home">
-  <input 
-    @fade
-    id="home" type="image" alt="Login"
-    width="70"
-    alt="Hom"
-    title="Home"
-    src="/assets/icons/home.png"
-  />
-  <label id="home-label">HOME</label>
-</a>
 
-<a *ngIf="isLoggedIn" href="/login">
+
+<a  routerLink="/login" routerLinkActive="active" *ngIf="check() === 1">
   <input 
     @fade
     id="logout" type="image" alt="Login"
     width="60"
     alt="Hom"
-    title="logout"
+    title="Wyloguj"
     src="/assets/icons/logout.png"
     (click)="logout()"
   />
-  <label id="logout-label">LOGOUT</label>
+  <label id="logout-label">Wyloguj</label>
 </a>
-
-</div>
-</div>
 <router-outlet></router-outlet>
+  
+</div>
+</div>
+
 

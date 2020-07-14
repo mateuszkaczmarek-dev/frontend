@@ -1,0 +1,62 @@
+#jed{
+    font-family:'Roboto',  sans-serif;
+    color: rgb(180, 180, 180);
+    display: block;
+      margin:0 auto;
+      text-align: left;
+      margin-top: 20%; 
+      width: 60%;
+    height: 60px;
+}
+
+#trzy{
+   
+        font-family:'Roboto',  sans-serif;
+        color: rgb(180, 180, 180);
+        display: block;
+          margin:0 auto;
+          text-align: center;
+          margin-top: 5%; 
+          width: 60%;
+        height: 60px;
+
+}
+
+#input_addquestion{
+    font-family:'Roboto',  sans-serif;
+    color: rgb(180, 180, 180);
+    font-size: 20px;
+    border-radius: 0.2rem;
+    background-color: rgba(80, 79, 79, 0.952);
+        display: block;
+          margin:0 auto;  
+          margin-top: 2%; 
+          resize: none;
+
+}
+
+#zatwierdz {
+    
+    background-color:#3f3f3f;
+      font-family: 'Open Sans', sans-serif;
+      font-size:18px;
+      text-decoration:none;
+      color: rgb(180, 180, 180);
+      background-image: linear-gradient(bottom, rgb(61, 61, 61) 0%, rgb(75, 75, 75) 100%);
+      border-radius: 5px;
+      box-shadow: inset 0px 1px 0px #3f3f3f, 0px 5px 0px 0px #322620, 0px 10px 5px #999;
+      display: block;
+      margin:0 auto;
+      text-align: center;
+      margin-top: 5%; 
+      margin-bottom: 5%;
+      width: 15%;
+      height: 60px;
+      border-radius: 0.5rem;
+  
+}
+
+
+
+
+

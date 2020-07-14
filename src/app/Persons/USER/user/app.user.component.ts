@@ -9,22 +9,33 @@ import { ApiService } from 'src/app/shared/api.service';
   styleUrls: ['./app.user.component.css']
 })
 export class AppUserComponent implements OnInit {
-  public static validation: boolean;
+  public validation = true;
   username: string;
-  question: Questions[];
-  constructor(private router: Router , private apiService:ApiService) { }
+  questionYesNo: Questions[];
+  constructor(private router: Router, private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.validateUser();
-    }
+  }
   validateUser() {
     this.username = sessionStorage.getItem('username');
-    if (sessionStorage.getItem('username') === null || !(AppUserComponent.validation)) {
-        this.router.navigate(['/login']);
+    if (sessionStorage.getItem('username') === null || !(this.validation)) {
+      this.router.navigate(['/login']);
+      console.log(this.validation);
+    } else {
+      this.router.navigate(['/user']);
     }
-  else{
-    this.apiService.getAllQuestions().subscribe(
-      data =>
-      this.question = data);
-  }}
+  }
+
+  yesno() {
+    this.router.navigate(['/user/yesno']);
+  }
+
+  numeric() {
+    this.router.navigate(['/user/numeric']);
+  }
+
+  descriptions() {
+    this.router.navigate(['/user/descriptions']);
+  }
 }

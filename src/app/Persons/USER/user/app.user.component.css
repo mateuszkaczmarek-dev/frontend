@@ -1,15 +1,76 @@
-.body
+
+.Head
 {
-    position: fixed;
-    top: 100px;
-    right: 500px;
     
-    
+    font-family: 'Open Sans', sans-serif;
+    font-size: large;
+    color: white;
+    color: rgb(180, 180, 180);
+    display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 10%; 
+  width: 80%;
 }
 
-.body #radioButton
+.Head #username
 {
-    position: absolute;
-    top:100px;
-    right: 200px;
+    color: blue;
 }
+
+.body #yesno{
+
+    background-color:#3f3f3f;
+      font-family: 'Open Sans', sans-serif;
+      font-size:18px;
+      text-decoration:none;
+      color: rgb(180, 180, 180);
+      background-image: linear-gradient(bottom, rgb(61, 61, 61) 0%, rgb(75, 75, 75) 100%);
+      border-radius: 5px;
+      box-shadow: inset 0px 1px 0px #3f3f3f, 0px 5px 0px 0px #322620, 0px 10px 5px #999;
+      display: block;
+      margin: auto;
+      text-align: center;
+      margin-top: 5%; 
+      width: 20%;
+      height: 60px;
+    border-radius: 0.5rem;
+  }
+
+  .body #numeric{
+
+    background-color:#3f3f3f;
+      font-family: 'Open Sans', sans-serif;
+      font-size:18px;
+      text-decoration:none;
+      color: rgb(180, 180, 180);
+      background-image: linear-gradient(bottom, rgb(61, 61, 61) 0%, rgb(75, 75, 75) 100%);
+      border-radius: 5px;
+      box-shadow: inset 0px 1px 0px #3f3f3f, 0px 5px 0px 0px #322620, 0px 10px 5px #999;
+      display: block;
+      margin: auto;
+      text-align: center;
+      margin-top: 3%; 
+      width: 20%;
+    height: 60px;
+    border-radius: 0.5rem;
+  }
+
+  .body #description{
+
+    background-color:#3f3f3f;
+      font-family: 'Open Sans', sans-serif;
+      font-size:18px;
+      text-decoration:none;
+      color: rgb(180, 180, 180);
+      background-image: linear-gradient(bottom, rgb(61, 61, 61) 0%, rgb(75, 75, 75) 100%);
+      border-radius: 5px;
+      box-shadow: inset 0px 1px 0px #3f3f3f, 0px 5px 0px 0px #322620, 0px 10px 5px #999;
+      display: block;
+      margin: auto;
+      text-align: center;
+      margin-top: 3%; 
+      width: 20%;
+    height: 60px;
+    border-radius: 0.5rem;
+  }

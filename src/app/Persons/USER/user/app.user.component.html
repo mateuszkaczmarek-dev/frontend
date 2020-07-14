@@ -1,25 +1,19 @@
-<body class="body">
-    <h2>Welcome {{username}}!</h2>
+<body>
+    <div class="Head">
+        <h2>Witaj <b id="username">{{username}}</b> w ankiecie , która pomoże Ci w prowadzeniu dziennika migrenowego.</h2>
+        <br>
+        <h3>Wybierz jedną z trzech opcji ankiety , która najbardziej Ci odpowiada :</h3>
+    </div>
+    <div class="body">
 
-
-    <ul *ngFor="let quest of question">
-        <li>
-            <div>
-            {{quest.id}}.{{quest.question}}
-             
-
-                <div class="radioButton">
-
-                    <input type="radio" value="TAK" name="{{quest.question}}">
-                    TAK
-               
-                    <input type="radio" value="NIE" name="{{quest.question}}">
-                    NIE
-                </div>  
-                
-            
-            </div>
-        </li>
-    </ul>
-    <button class="button" ngSubbmit="">Submit</button>
+        <div>
+            <button id="yesno" type="submit" (click)="yesno()">Odpowiedzi tak lub nie</button>
+        </div>
+        <div>
+            <button id="numeric" type="submit" (click)="numeric()">Odpowiedzi numeryczne</button>
+        </div>
+        <div>
+            <button id="description" type="submit" (click)="descriptions()">Opis</button>
+        </div>
+    </div>
 </body>

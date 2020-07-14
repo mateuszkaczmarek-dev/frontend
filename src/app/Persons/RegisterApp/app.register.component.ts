@@ -26,33 +26,51 @@ import { ApiService } from 'src/app/shared/api.service';
 export class AppRegisterComponent implements OnInit {
   personTwo: Person[] = [];
   person: Person = new Person();
- constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) { }
   emailPattern = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
   ngOnInit() {
-      //this.getAllPerson();
+    //this.getAllPerson();
   }
-postRegistration(ngForm: NgForm): void {
-  if (this.person.username != null && this.person.password != null && this.person.email != null) {
-  this.apiService.postRegistration(this.person)
-      .subscribe( res => {
-        location.reload();
-        alert('User created successfully.');
+  postRegistration(ngForm: NgForm): void {
+    let check = 0;
+    this.apiService.getAll().subscribe(data => {
+      this.personTwo = data;
+      if (this.person.username != null && this.person.password != null && this.person.email != null) {
+
+        for (const pers of this.personTwo) {
+          if (pers.username === this.person.username) {
+            check = 1;
+          }
+
+        }
+      } else if ((this.person.username === null || this.person.password === null || this.person.email === null) ||
+      this.person.username === undefined || this.person.password === undefined || this.person.email === undefined) {
+        check = 2;
       }
-      );
- } else {
-   alert('Empty fields detected');
- }
- }
-/*public getAllPerson() {
-      this.apiService.getAll().subscribe(
-      res => {
-        this.personTwo = res;
-      },
-      err => {
-        alert('An error is accurated');
-      }); }*/
+      if (check === 1) {
+        alert('Taki login juz istnieje');
+      } else if (check === 0) {
+        this.apiService.postRegistration(this.person)
+          .subscribe(res => {
+            location.reload();
+            alert('Użytkownik utworzony poprawnie.');
+          }
+          );
+      } else if(check = 2) {
+        alert('Wypełnij puste pola');
+      }
+
+      /*public getAllPerson() {
+            this.apiService.getAll().subscribe(
+            res => {
+              this.personTwo = res;
+            },
+            err => {
+              alert('An error is accurated');
+            }); }*/
 
 
+    });
+  }
 }
-
 

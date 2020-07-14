@@ -7,6 +7,10 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation/navigation.component';
 import { AppUserComponent } from './Persons/USER/user/app.user.component';
+import { YesnoComponent } from './Persons/USER/user/yesno/yesno.component';
+import { NumericComponent } from './Persons/USER/user/numeric/numeric.component';
+import { DescriptionsComponent } from './Persons/USER/user/descriptions/descriptions.component';
+import { AboutComponent } from './About/about/about.component';
 
 
 
@@ -19,6 +23,10 @@ import { AppUserComponent } from './Persons/USER/user/app.user.component';
     routingCompomponents,
     NavigationComponent,
     AppUserComponent,
+    YesnoComponent,
+    NumericComponent,
+    DescriptionsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

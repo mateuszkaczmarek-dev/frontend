@@ -1,9 +1,10 @@
 .login-class #login-img 
 {
-    position: absolute;
-    top:300px;
-    right: 600px;
-    opacity: 1;
+  
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 20%; 
 }
 
 
@@ -18,20 +19,13 @@
 
 body {
   height: 100vh;
-	width: 100%;
   background: #0f2027; /* fallback for old browsers */
   background: linear-gradient(to right,#0b0c0c, #203a43, #0f2027);
-  display: flex;
   justify-content: center;
   align-items: center;
   
 }
 
-h3 {
-  position: absolute;
-  top:300px;
-  right:610px;
-}
 .name__label {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
@@ -40,20 +34,22 @@ h3 {
   display: block;
   transition: all 0.3s;
   transform: translateY(0rem);
+  
 }
 
 .name__input {
   font-family:'Roboto',  sans-serif;
   color: rgb(180, 180, 180);
   font-size: 1.2rem;
-  top:460px;
-  right:610px;
   padding: 1.5rem 2rem;
   border-radius: 0.2rem;
   background-color: rgba(80, 79, 79, 0.952);
   border: none;
-  position: absolute;
-  width: 150;
+  display: block;
+  margin:0 auto;
+  text-align: center;
+  margin-top: 0%;
+  width: 14%;
   transition: all 0.3s;
 }
 
@@ -72,40 +68,46 @@ h3 {
   font-family: 'Roboto', sans-serif;
   color: rgb(180, 180, 180);
   font-size: 1.2rem;
-  top:560px;
-  right:610px;
   padding: 1.5rem 2rem;
   border-radius: 0.2rem;
   background-color: rgba(80, 79, 79, 0.952);
   border: none;
-  position: absolute;
-  width: 150;
+  width: 14%;
   display: block;
+  margin:0 auto;
+  text-align: center;
+  margin-top: 2%;
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
   
 }
 
 .login-class #submit_button{
-
+ 
   background-color:#3f3f3f;
 	font-family: 'Open Sans', sans-serif;
 	font-size:18px;
-	text-decoration:none;
 	color: rgb(180, 180, 180);
 	background-image: linear-gradient(bottom, rgb(61, 61, 61) 0%, rgb(75, 75, 75) 100%);
 	border-radius: 5px;
 	box-shadow: inset 0px 1px 0px #3f3f3f, 0px 5px 0px 0px #322620, 0px 10px 5px #999;
-  position: absolute;
-  width: 150px;
+  display: block;
+  margin:0 auto;
+  text-align: center;
+  margin-top: 2%;
+  width: 10%;
   height: 40px;
-  top:660px;
-  right:44.3%;
+
   border-radius: 0.5rem;
 }
 
-.show{
-  position: absolute;
-  top:860px;
-  right:560px;
+#not{
+  font-family:'Roboto',  sans-serif;
+  color: rgb(180, 180, 180);
+  display: block;
+  margin:0 auto;
+  width:20%;
+  text-align: center;
+  margin-top: 2%;
 }
+

@@ -1,0 +1,17 @@
+<body>
+   
+        <h2 id="jed">
+            Jesteś w dziale opisowym. W tej sekcji możesz opisać swoje spostrzeżenia na temat bólu głowy ( guz , migrena etc).
+            Po naciśnięciu przycisku "Zatwierdź" wygeneruje się plik Excel.
+        </h2>
+        
+  
+
+        <h2 id="trzy">Poniżej opisz całą sytuację.</h2>
+
+    <textarea type="text" id="input_addquestion" rows="10" cols="50" name="input" [(ngModel)]= "description"></textarea>
+
+        <button id="zatwierdz" type="submit" (click)="getDescription(description)">Zatwierdź</button>
+    
+
+</body>

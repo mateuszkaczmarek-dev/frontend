@@ -1,0 +1,23 @@
+<body id="bod">
+   
+           <h2 id="jed">Jesteś w ankiecie pytań TAK/NIE , wypełnij ją! Możesz również dodac pytanie. Po naciśnięciu przycisku "Zatwierdź" wygeneruje się plik Excel.</h2>
+        
+        <h3 id="dwa">Pytań {{counterYesNo}} z {{counterYesNo+counterNumeric}}</h3>
+    <section id="container" *ngFor="let quest of firstQuestion; index as i">  
+            {{i+1}}.{{quest.question}}
+            <input  type="radio"  name="{{quest.question}}" value="Tak" [(ngModel)]="answers[i]"><label for="tak">Tak</label>
+            <input  type="radio" name="{{quest.question}}"  value="Nie" [(ngModel)]="answers[i]"><label for="nie">Nie</label>
+        
+            
+     </section>
+    <button id="zatwierdz" type="submit" (click)="check()">Zatwierdź</button>
+  
+
+        <h2 id="trzy" >Tutaj wpisz jakie pytanie chcesz dodać.</h2>
+
+    <textarea type="text" id="input_addquestion" rows="4" cols="50" name="input" [(ngModel)]= "addQuestion.question"></textarea>
+    
+        <button id="button_addquestion" type="submit" (click)="add(addQuestion.question)">Dodaj pytanie</button>
+
+    
+</body>

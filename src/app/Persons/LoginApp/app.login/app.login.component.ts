@@ -25,13 +25,9 @@ import { AppUserComponent } from '../../USER/user/app.user.component';
 export class AppLoginComponent implements OnInit {
 
   constructor(
-    private route: ActivatedRoute,
     private router: Router,
     private apiService: ApiService
-    //private http: HttpClient
   ) { }
-
-  
   appComponent: AppComponent;
   person: Person[];
   per: Person = {
@@ -39,74 +35,41 @@ export class AppLoginComponent implements OnInit {
     password: ''
   };
   personList: Array<Person>;
-  
-  
-  public isValid: boolean = false;
-  message: any;
 
 
   ngOnInit(): void {
-    
+    sessionStorage.clear();
   }
 
   public checkLogin(username: string, password: string) {
 
+
     this.apiService.getAll().subscribe(data => {
       this.person = data;
-      /*if(username === null && password === null){
-        alert('Empty fields detected ! Please refill empty fields');
-      }*/
-      
+      let correct = true;
+      if (username === '' || password === '') {
+          alert('Wypełnij puste pola');
+        } else {
       for (const pers of this.person) {
-        
-        if (username === pers.username && password === pers.password) {
-          this.isValid = true;
-          AppUserComponent.validation = this.isValid;
-          AppAdminComponent.validation = this.isValid;
-          alert('Login successfull by ' + username);
-          if (pers.roles === 'ROLE_ADMIN') {
-            
-            this.router.navigate(['/root']);
-            sessionStorage.setItem('username', username);
-          } else if (pers.roles === 'ROLE_USER') {
-            this.router.navigate(['/user']);
-            sessionStorage.setItem('username', username);
-          }
-          break;
-        }
 
-      
-      else {
-        AppAdminComponent.validation = false;
-       AppUserComponent.validation = false;
-        
-        alert('Incorrect data');
+        if (username === pers.username && password === pers.password) {
+          correct = true;
+          alert('Zalogowałeś się jako ' + username);
+          sessionStorage.setItem('username', username);
+          this.router.navigate(['/user']);
+          break;
+
+        } else if (username !== pers.username && password !== pers.password) {
+          correct = false;
+        } else {
+          correct = true;
+        }
       }
-      }
-  } 
-    );
+      if (!correct) {
+      alert('zly login lub hasło');
+    }
+    }
+  });
   }
 
-
- /* login() {
-   let resp = this.apiService.login(this.person.username, this.person.password);
-   resp.subscribe(data => {
-      console.log(data); })
-  }*/
-  /*public checkLogin() {
-    let url = 'http://localhost:8080/api/login';
-    let result = this.http.post(url, {
-          login: this.person.login,
-          password: this.person.password
-      }).subscribe(isValid => {
-          if (isValid) {
-              sessionStorage.setItem(
-                'token', btoa(this.person.login + ':' + this.person.password)
-              );
-          this.router.navigate(['/root']);
-          } else {
-              alert('Authentication failed.')
-          }
-      });
-}*/
 }

@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 import { Person } from '../Persons/models/person.interface';
 import { map } from 'rxjs/operators';
 import { Questions } from '../Persons/models/questions/questions.interface';
+import { QuestionsYesNo } from '../Persons/models/questions/questionYesNo.interface';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  API_URL: string = 'http://localhost:8080/api/all';
+  public API_URL = 'http://localhost:8080/api/all';
 
   person: Person[];
   pers: Person = new Person();
@@ -21,34 +22,24 @@ export class ApiService {
      return this.http.get<Person[]>('http://localhost:8080/api/all');
   }
 
-  getAllQuestions(): Observable<Questions[]> {
-    return this.http.get<Questions[]>('http://localhost:8080/api/allquestions');
+  getAllFirstQuestions(): Observable<QuestionsYesNo[]> {
+    return this.http.get<QuestionsYesNo[]>('http://localhost:8080/api/firstQuestionsList');
+  }
+
+  getAllSecondQuestions(): Observable<Questions[]> {
+    return this.http.get<Questions[]>('http://localhost:8080/api/secondQuestionsList');
   }
 
   postRegistration(person: Person): Observable<any> {
     return this.http.post('http://localhost:8080/api', person);
   }
-//autoryzacja , sprawdzanie czy zalogowany i wylogowywanie
-  public login(username: string , password: string) {
-    console.log(username+ ':' +password)
-    let headers = new HttpHeaders();
-    headers.append('Authorization' , 'Basic' + btoa(username + ':' + password));
-    return this.http.get('http://localhost:8080/api/login', {headers, responseType: 'text' as 'json'}).pipe(map(userData =>{
-      sessionStorage.setItem('login', JSON.stringify(userData));
-      return userData;
-    }));
-  }
-  isUserLoggedIn() {
-    let person = sessionStorage.getItem('login');
-    console.log(!(person == null));
-    return !(person == null);
+
+  addFirstQuestion(question: QuestionsYesNo): Observable<any> {
+    return this.http.post('http://localhost:8080/api/firstQuestions', question);
   }
 
-  logout() { 
-    sessionStorage.removeItem('login');
+  addSecondQuestion(question: Questions): Observable<any> {
+    return this.http.post('http://localhost:8080/api/secondQuestions', question);
   }
-
-
-
 
 }

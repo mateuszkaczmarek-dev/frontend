@@ -1,31 +1,35 @@
-<form name="form" #f="ngForm" >
-    <div  @fade class="login-class">
-      <img 
-      id="login-img" src="/assets/icons/login-banner.png">
-  
-      <!--Login-->
+<form name="form" #f="ngForm">
+  <div @fade class="login-class">
+    <img id="login-img" src="/assets/icons/login-banner.png">
+
+    <!--Login-->
+    <div>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <!--<div [ngClass]="{ 'has-error': f.submitted && !login.valid }">-->
       <div>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!--<div [ngClass]="{ 'has-error': f.submitted && !login.valid }">-->
-      <div>
-  <input type="text" class="name__input"  name="username"  [(ngModel)]="per.username" placeholder="Login" required="" autocomplete="off"/>
-  <label for="name" class="name__label"></label>
-  <!--<div *ngIf="f.submitted && !login.valid">Username is required</div>-->
-    </div>
-</div>
-      <!--Password-->
-      <div>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <!--<div [ngClass]="{ 'has-error': f.submitted && !password.valid }">-->
-          <div>
-      <input type="password" class="password__input" name="password" [(ngModel)]="per.password" placeholder="Password"  required="" autocomplete="off"/>
-      <label for="password" class="password__label"></label>
-      <!--<div *ngIf="f.submitted && !password.valid">Password is required</div>-->
+        <input type="text" class="name__input" name="username" [(ngModel)]="per.username" placeholder="Login"
+          required="" autocomplete="off" />
+        <label for="name" class="name__label"></label>
+        <!--<div *ngIf="f.submitted && !login.valid">Username is required</div>-->
       </div>
     </div>
-  <!--Submit Button-->
-  <div>
-  <button id="submit_button" type="submit" (click)="checkLogin(per.username, per.password)">Login</button>
-  </div>
-  </div>
+    <!--Password-->
+    <div>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <!--<div [ngClass]="{ 'has-error': f.submitted && !password.valid }">-->
+      <div>
+        <input type="password" class="password__input" name="password" [(ngModel)]="per.password" placeholder="Hasło"
+          required="" autocomplete="off" />
+        <label for="password" class="password__label"></label>
+        <!--<div *ngIf="f.submitted && !password.valid">Password is required</div>-->
+      </div>
+    </div>
+    <!--Submit Button-->
+    <div>
+      <button id="submit_button" type="submit" (click)="checkLogin(per.username, per.password)">Zaloguj</button>
+    </div>
+    
+      <a id="not" href="/register">Nie masz konta ? Kliknij tutaj</a>
+    
+  </div> 
 </form>
